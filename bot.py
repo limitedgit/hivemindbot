@@ -30,4 +30,3 @@ async def on_message(message):
 
 
 
-client.run('MzUxNzk0NDU5MTA2NjA3MTA0.DYjDhA.aJUDKTEUUD8bEVuPj5khWI3SXlY', bot=True)
