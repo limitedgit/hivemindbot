@@ -31,7 +31,7 @@ client.on("message", async message => {
       .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
     }
     if (command === "server"`) {
-    message.channel.send(`This server's name is: ${message.guild.name}`);
+    message.channel.send("This server's name is: ${message.guild.name}");
     }  
 });
 
