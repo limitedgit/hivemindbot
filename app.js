@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const k = require("./config.json");
 
 client.on('ready', () => {
     console.log('My Body is ready!');
@@ -7,7 +8,7 @@ client.on('ready', () => {
 
 client.on("message", async message => {
     
-    const args = message.content.slice("!".length).trim().split(/ +/g);
+    const args = message.content.slice(k.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
     if(message.author.bot) return;
     if (message.content === 'ping') {
@@ -31,4 +32,4 @@ client.on("message", async message => {
     }
 });
 
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.config.token);
