@@ -32,4 +32,4 @@ client.on("message", async message => {
     }
 });
 
-client.login(process.env.k.token);
+client.login(process.env.BOT_TOKEN);
