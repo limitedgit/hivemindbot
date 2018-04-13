@@ -30,6 +30,9 @@ client.on("message", async message => {
     message.channel.bulkDelete(fetched)
       .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
     }
+    if (command === "server"`) {
+    message.channel.send(`This server's name is: ${message.guild.name}`);
+    }  
 });
 
 client.login(process.env.BOT_TOKEN);
