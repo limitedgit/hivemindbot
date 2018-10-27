@@ -22,9 +22,6 @@ client.on("message", async message => {
     message.delete().catch(O_o=>{}); 
     message.channel.send(sayMessage);
     }
-    if (command === "server"){
-    return message.reply('welcome to ${message.guild.name}')
-    }
     if(command === "purge") {
     const deleteCount = parseInt(args[0], 10);
     if(!deleteCount || deleteCount < 2 || deleteCount > 100){
