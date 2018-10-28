@@ -23,7 +23,7 @@ client.on("message", async message => {
     message.channel.send(sayMessage);
     }
     if (command === "server"){
-    message.channel.send(message.guild.name)
+    message.channel.send('welcome to ${message.guild.name}')
     }
     if(command === "purge") {
     const deleteCount = parseInt(args[0], 10);
