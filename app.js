@@ -27,7 +27,7 @@ client.on("message", async message => {
     message.channel.send(`welcome to ${message.guild.name}`)
     }
     if(command === "purge") {
-    const deleteCount = parseInt(args[1]) + 1;
+    const deleteCount = parseInt(args[0]) + 1;
     if(!deleteCount || deleteCount < 2 || deleteCount > 100)
       return message.reply("2 - 99 please");
     const fetched = await message.channel.fetchMessages({limit: deleteCount});
