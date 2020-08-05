@@ -18,6 +18,7 @@ client.on("message", async message => {
     	message.reply('hi');
   	}
     
+    if (message.content.startsWith(k.prefix) === false) return;
     if(command === "say") {
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{}); 
