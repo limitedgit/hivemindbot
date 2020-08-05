@@ -17,6 +17,7 @@ client.on("message", async message => {
     if (message.content === 'hi') {
     	message.reply('hi');
   	}
+    
     if(command === "say") {
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{}); 
@@ -26,7 +27,7 @@ client.on("message", async message => {
     message.channel.send(`welcome to ${message.guild.name}`)
     }
     if(command === "purge") {
-    const deleteCount = parseInt(args[0], 10);
+    const deleteCount = parseInt(args[1], 10);
     if(!deleteCount || deleteCount < 2 || deleteCount > 100)
       return message.reply("2 - 100 please");
     const fetched = await message.channel.fetchMessages({count: deleteCount});
