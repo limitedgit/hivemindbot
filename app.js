@@ -10,7 +10,6 @@ client.on("message", async message => {
     
     const args = message.content.slice(k.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
-    if(message.author.bot) return;
     if (message.content === 'ping') {
     	message.reply('pong');
   	}
