@@ -27,10 +27,10 @@ client.on("message", async message => {
     message.channel.send(`welcome to ${message.guild.name}`)
     }
     if(command === "purge") {
-    const deleteCount = parseInt(args[1], 10) + 1;
+    const deleteCount = parseInt(args[1]) + 1;
     if(!deleteCount || deleteCount < 2 || deleteCount > 100)
       return message.reply("2 - 99 please");
-    const fetched = await message.channel.fetchMessages({count: deleteCount});
+    const fetched = await message.channel.fetchMessages({limit: deleteCount});
     message.channel.bulkDelete(fetched)
       .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
     }
